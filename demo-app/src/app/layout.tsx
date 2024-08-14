@@ -5,6 +5,8 @@ import { ThemeProvider } from "../theme/ThemeProvider";
 import { Container } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import AppBar from "@/components/navBar/NavBar";
+// import { ThemeProvider as MuiThemeProvider } from "@mui/material";
+// import theme from "@/theme/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +32,16 @@ export default function RootLayout({
             </main>
           </div>
         </ThemeProvider>
+        {/* EXAMPLE: THIS WILL NOT WORK BECAUSE ALL CLIENT SPECIFIC CODE MUST BE WRAPPED IN A CLIENT COMPONENT */}
+        {/* <MuiThemeProvider theme={theme}>
+          <div>
+            <CssBaseline />
+            <AppBar />
+            <main>
+              <Container maxWidth={false}>{children}</Container>
+            </main>
+          </div>
+        </MuiThemeProvider> */}
       </body>
     </html>
   );
